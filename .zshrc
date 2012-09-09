@@ -1,3 +1,6 @@
+# Set LANG to en_US.UTF-8
+export LANG=en_US.UTF-8
+
 export ZSH=~/.zsh
 
 # Load all of the config files in ~/oh-my-zsh that end in .zsh
