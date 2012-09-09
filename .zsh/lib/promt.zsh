@@ -18,8 +18,10 @@ zstyle ':vcs_info:*' stagedstr '+'  # display this when there are staged changes
 zstyle ':vcs_info:*' actionformats '[%b%|%a%c%u%]%f'
 zstyle ':vcs_info:*' formats ':%b%c%u%f'
 
+# Save a heart to a local variable if the last command exited with success.
+local smiley="%(?,%{$fg[green]%}❤%{$reset_color%},%{$fg[red]%}✖%{$reset_color%})"
 
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
 precmd () { vcs_info }
 
-PROMPT='[%n@%m %~${vcs_info_msg_0_}] %{$reset_color%}'
+PROMPT='${smiley}  [%n@%m %~${vcs_info_msg_0_}] %{$reset_color%}'
