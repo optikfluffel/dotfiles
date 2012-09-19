@@ -24,4 +24,4 @@ local smiley="%(?,%{$fg[green]%}❤%{$reset_color%},%{$fg[red]%}✖%{$reset_colo
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
 precmd () { vcs_info }
 
-PROMPT='${smiley}  [%n@%m %~${vcs_info_msg_0_}] %{$reset_color%}'
+PROMPT='[${smiley}  %~${vcs_info_msg_0_}] %{$reset_color%}'
